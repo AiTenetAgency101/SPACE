@@ -1,0 +1,10 @@
+﻿{
+    "Label":  "PRE-VERIFIED_BEFORE_TEST",
+    "Timestamp_AEST":  "20260504 07:12:24",
+    "TruthAnchor":  "20260504 07:12:24 AEST",
+    "Witness":  "20260504 06:56:31 AEST",
+    "SatelliteWitness":  "20260504 06:56:31 AEST",
+    "NOA_NOVA_SHA512":  "01a142ae65376236dcd289d8559c10c546bc3b88c76532eaa89f40f0b18d7b02333e72274d592d79cb22b53de9cf5c860b93ae93e98d321c72e28fade5bf91c9",
+    "Engines":  "TESLA,EINSTEIN,NEWTON ACTIVE",
+    "Commands":  "HEKE,COOK ACTIVE"
+}
