@@ -1,5 +1,5 @@
 # Build stage
-FROM python:3.11-slim AS builder
+FROM python:3.14-slim AS builder
 
 WORKDIR /app
 COPY main.py runner.py healthcheck.py ./
@@ -7,7 +7,7 @@ COPY cycle_monitor.py ./
 COPY engines engines/
 
 # Production stage
-FROM python:3.11-slim
+FROM python:3.14-slim
 
 WORKDIR /app
 
