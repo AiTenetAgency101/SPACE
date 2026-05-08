@@ -1,0 +1,73 @@
+﻿ENTANGLED_ENGINES:
+  faker:
+    role: "synthetic_data"
+    mode: "pip_runtime"
+    allowed_usage:
+      - generate_tabular
+      - generate_json
+      - non_sensitive
+
+  ydata_profiling:
+    role: "data_profiling"
+    mode: "pip_runtime"
+    allowed_usage:
+      - dataset_profiling
+      - html_reports
+      - json_summaries
+
+  psutil:
+    role: "system_metrics"
+    mode: "pip_runtime"
+    allowed_usage:
+      - cpu_metrics
+      - memory_metrics
+      - disk_metrics
+      - network_metrics
+
+  yfinance:
+    role: "market_data"
+    mode: "pip_runtime"
+    allowed_usage:
+      - historical_prices
+      - basic_fundamentals
+
+  seaborn:
+    role: "stat_visuals"
+    mode: "pip_runtime"
+    allowed_usage:
+      - static_plots
+      - png_svg_output
+
+  duckdb:
+    role: "inprocess_sql"
+    mode: "pip_runtime"
+    allowed_usage:
+      - local_queries
+      - csv_parquet_io
+
+  sentence_transformers:
+    role: "embeddings"
+    mode: "pip_runtime"
+    allowed_usage:
+      - text_embeddings
+      - similarity_scores
+
+  requests_html:
+    role: "web_extraction"
+    mode: "pip_runtime"
+    allowed_usage:
+      - html_fetch
+      - basic_parsing
+
+  wordcloud:
+    role: "text_visual"
+    mode: "pip_runtime"
+    allowed_usage:
+      - wordcloud_images
+
+  scikit_learn:
+    role: "ml_models"
+    mode: "pip_runtime"
+    allowed_usage:
+      - classical_ml
+      - metrics_output

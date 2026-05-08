@@ -3,27 +3,22 @@ FROM python:3.11-slim AS builder
 
 WORKDIR /app
 COPY main.py runner.py healthcheck.py ./
+COPY cycle_monitor.py ./
 COPY engines engines/
 
 # Production stage
 FROM python:3.11-slim
 
-# Create non-root user
-RUN useradd -m -u 1000 appuser
-
 WORKDIR /app
 
 # Copy application code from builder
-COPY --from=builder --chown=appuser:appuser /app .
+COPY --from=builder /app .
 
-# Create volume directories with correct permissions
-RUN mkdir -p logs state && chown -R appuser:appuser logs state
+# Create directories
+RUN mkdir -p logs state .satellite-state
 
-# Set user to non-root
-USER appuser
-
-# Health check (cycle-based)
-HEALTHCHECK --start-period=5s --retries=2 \
+# Health check
+HEALTHCHECK --start-period=5s --interval=5s --timeout=3s --retries=1 \
     CMD python healthcheck.py || exit 1
 
 # Run application

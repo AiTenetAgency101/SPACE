@@ -1,23 +1,40 @@
-﻿from runner import run_engine
+"""
+ENGINE2 ORCHESTRATOR - 7 ENGINES SIMPLE
+"""
 
-def main():
-    print("=== ULTIMATE ENGINE ===")
-    print(run_engine("ultimate", {"msg": "ping"}))
+from runner import run_engine
+from pathlib import Path
 
-    print("\n=== TENET ENGINE ===")
-    print(run_engine("tenet", {"msg": "ping"}))
+# 7 Engines
+ENGINES = [
+    ("ultimate", {"msg": "ping"}),
+    ("tenet", {"msg": "ping"}),
+    ("worker365", {"msg": "ping"}),
+    ("tron", {"n": 3029}),
+    ("zha", {"msg": "ping"}),
+    ("xyo", {"msg": "sync"}),
+]
 
-    print("\n=== ENGINE-365-DAYS ===")
-    print(run_engine("worker365", {"msg": "ping"}))
+def run_cycle():
+    """Execute one ENGINE cycle."""
+    print("\n[ENGINE2] Starting cycle...\n")
+    
+    try:
+        # Run all engines
+        for engine_name, payload in ENGINES:
+            result = run_engine(engine_name, payload)
+            print(f"✓ {engine_name.upper():12s}: {result}")
 
-    print("\n=== TRON ENGINE ===")
-    print(run_engine("tron", {"n": 3029}))
+        # Mark healthy
+        Path("/tmp/engine_cycle_health").write_text("healthy")
+        print("\n[ENGINE2] Cycle complete\n")
+        return True
 
-    print("\n=== ZHA ENGINE ===")
-    print(run_engine("zha", {"msg": "ping"}))
+    except Exception as e:
+        print(f"\n[ERROR] {e}\n")
+        Path("/tmp/engine_cycle_health").write_text("unhealthy")
+        return False
 
-    print("\n=== XYO ENGINE ===")
-    print(run_engine("xyo", {"msg": "ping"}))
 
 if __name__ == "__main__":
-    main()
+    run_cycle()

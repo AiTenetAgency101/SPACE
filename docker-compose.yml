@@ -84,6 +84,8 @@ services:
       test: ["CMD", "python", "/app/healthcheck.py"]
       start_period: 5s
       retries: 2
+      interval: 10s
+      timeout: 5s
     environment:
       - PYTHONUNBUFFERED=1
       - PUBLIC_DOMAIN=robdoe.com
@@ -91,6 +93,7 @@ services:
     volumes:
       - ./LOGS:/app/logs
       - ./STATE:/app/state
+      - ./.satellite-state:/app/.satellite-state
     logging:
       driver: json-file
       options:
@@ -115,6 +118,7 @@ services:
     volumes:
       - ./LOGS:/app/logs
       - ./STATE:/app/state
+      - ./.satellite-state:/app/.satellite-state
     networks:
       - engine-network
     ports:

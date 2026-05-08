@@ -1,0 +1,22 @@
+﻿{
+  "engines": [
+    {
+      "name": "freeCodeCamp",
+      "role": "doctrine_corpus",
+      "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "usage": "reference only; patterns, exercises, examples"
+    },
+    {
+      "name": "tensorflow-core",
+      "role": "ml_engine",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "usage": "used via pip wheels; repo not fully cloned"
+    },
+    {
+      "name": "tensorflow-playground",
+      "role": "ml_sandbox",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "usage": "experiments only; shallow or remote usage"
+    }
+  ]
+}

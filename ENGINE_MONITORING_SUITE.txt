@@ -1,0 +1,276 @@
+# ENGINE MONITORING SUITE - READY TO USE
+
+## You Can Now Run These Commands Anytime ✓
+
+---
+
+## 3 FILES CREATED FOR YOU
+
+### 1. ENGINE_MONITOR.bat (Interactive Menu)
+**Best for:** Quick Windows usage
+```
+ENGINE_MONITOR.bat
+```
+- Interactive menu with 15 options
+- Click or select option number
+- No need to remember commands
+
+### 2. ENGINE_MONITOR.ps1 (PowerShell Functions)
+**Best for:** Advanced monitoring
+```
+. .\ENGINE_MONITOR.ps1
+Get-QuickStatus
+Get-DetailedMetrics
+Get-LiveStats
+Get-Engine365Deep
+Get-UltimateEngineDeep
+Get-TenetAIDeep
+```
+
+### 3. QUICK_COMMAND_REFERENCE.md (Copy & Paste)
+**Best for:** Individual commands
+- Copy any command and run it
+- No files needed
+- Works everywhere
+
+---
+
+## YOUR 3 RUNNING ENGINES
+
+```
+┌─────────────────────────────────────────────────┐
+│ engine-365-days (Core 365)                      │
+│ Status: HEALTHY ✓                               │
+│ Cycles: 12,104,208                              │
+│ Consensus: 100%                                 │
+│ Uptime: 0.378 days                              │
+│ CPU: 45% | Memory: 17%                          │
+│ Validators: Circle, Monotonic, Range (100% OK)  │
+└─────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────┐
+│ ultimate-engine (Sovereign)                     │
+│ Status: RUNNING ✓                               │
+│ Cycles: 2,548,079                               │
+│ Execution: 39%                                  │
+│ Byzantine Layers: 12                            │
+│ Uptime: 0.378 days                              │
+│ CPU: 30% | Memory: 4.5%                         │
+│ Sovereignty Orders: 10                          │
+└─────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────┐
+│ tenetaiagency-101 (Drift Tracker)               │
+│ Status: HEALTHY ✓                               │
+│ Ticks: 641,642,364                              │
+│ Rejection: 100%                                 │
+│ Uptime: 0.378 days                              │
+│ CPU: 103% | Memory: 1.7%                        │
+│ Drift Ratio: 320,821,187                        │
+│ Heartbeat: Active                               │
+└─────────────────────────────────────────────────┘
+```
+
+---
+
+## FASTEST COMMANDS (Copy & Paste Now)
+
+### Batch File (Windows CMD)
+```batch
+ENGINE_MONITOR.bat
+```
+
+### PowerShell One-Liners
+```powershell
+# All engines status
+docker exec engine-365-days cat /logs/metrics.json | ConvertFrom-Json | Select timestamp, uptime_days, cycles_completed, consensus_rate, rejection_rate
+docker exec ultimate-engine cat /logs/ultimate_sovereign_metrics.json | ConvertFrom-Json | Select timestamp, uptime_days, cycles, execution_rate
+docker exec tenetaiagency-101 cat /logs/metrics.json | ConvertFrom-Json | Select timestamp, uptime_days, ticks, rejection_rate
+
+# Real-time stats
+docker stats --no-stream engine-365-days ultimate-engine tenetaiagency-101
+
+# Recent activity
+docker exec engine-365-days tail -20 /logs/cycles.log
+docker exec tenetaiagency-101 tail -20 /logs/audit.log
+```
+
+---
+
+## WHAT EACH COMMAND DOES
+
+| Command | File | Purpose |
+|---------|------|---------|
+| `ENGINE_MONITOR.bat` | engine_monitor.bat | Interactive menu for all monitoring options |
+| `. .\ENGINE_MONITOR.ps1` | engine_monitor.ps1 | Load PowerShell functions |
+| `Get-QuickStatus` | engine_monitor.ps1 | Quick glance at all 3 engines |
+| `Get-DetailedMetrics` | engine_monitor.ps1 | Full JSON metrics |
+| `Get-LiveStats` | engine_monitor.ps1 | Real-time CPU/memory |
+| `Get-Engine365Deep` | engine_monitor.ps1 | Deep analysis of engine-365-days |
+| `Get-UltimateEngineDeep` | engine_monitor.ps1 | Deep analysis of ultimate-engine |
+| `Get-TenetAIDeep` | engine_monitor.ps1 | Deep analysis of tenetaiagency-101 |
+| `docker stats --no-stream` | - | Live resource usage |
+| `docker exec X cat /logs/metrics.json` | - | Raw metrics |
+| `docker exec X tail -20 /logs/` | - | Recent log entries |
+
+---
+
+## HOW TO USE
+
+### Option 1: Interactive Menu (Easiest)
+```
+1. Open Command Prompt
+2. Navigate to this folder
+3. Type: ENGINE_MONITOR.bat
+4. Select option 1-15
+5. Press Enter
+```
+
+### Option 2: PowerShell Functions
+```
+1. Open PowerShell
+2. Navigate to this folder
+3. Type: . .\ENGINE_MONITOR.ps1
+4. Type: Get-QuickStatus
+5. Press Enter
+```
+
+### Option 3: Individual Commands
+```
+1. Open PowerShell or Command Prompt
+2. Copy any command from QUICK_COMMAND_REFERENCE.md
+3. Paste and run
+4. View output
+```
+
+---
+
+## RECOMMENDED MONITORING ROUTINE
+
+**Every 5 minutes:**
+```powershell
+Get-QuickStatus
+```
+
+**Every 30 minutes:**
+```powershell
+Get-DetailedMetrics
+Get-LiveStats
+```
+
+**Every hour:**
+```powershell
+Get-FullDiagnostics
+```
+
+**Daily:**
+```powershell
+docker stats --no-stream engine-365-days ultimate-engine tenetaiagency-101 > daily_stats.txt
+```
+
+---
+
+## KEY METRICS TO WATCH
+
+### Engine-365-Days
+- ✓ Consensus Rate: Should be 1.0 (100%)
+- ✓ Rejection Rate: Currently 0.71 (71%)
+- ✓ Validator Reliability: All 1.0 (100%)
+- ⚠ Cycles: Should keep growing
+
+### Ultimate-Engine
+- ✓ Byzantine Layers: 12 (good)
+- ✓ Execution Rate: 39% (normal)
+- ✓ Rejection Rate: 61% (normal)
+- ⚠ Cycles: Should keep growing
+
+### Tenet-AI-Agency-101
+- ✓ Heartbeat: Active
+- ✓ Rejection Rate: 100% (by design)
+- ⚠ Ticks: Should keep growing
+- ⚠ Drift Ratio: Monitor for changes
+
+---
+
+## ALERT THRESHOLDS
+
+Stop monitoring and investigate if:
+
+| Metric | Threshold | Action |
+|--------|-----------|--------|
+| Consensus Rate | < 0.95 | Check validators |
+| Rejection Rate | > 0.75 | Review decision logic |
+| CPU Usage | > 90% | Check resource limits |
+| Memory Usage | > 85% | Increase allocation |
+| Cycles Growing | Not increasing | Container may be stuck |
+| Container Status | Not "healthy" | Restart container |
+
+---
+
+## FILES YOU NOW HAVE
+
+```
+C:\DOCTRINES\
+├── ENGINE_MONITOR.bat          ← Run this (interactive menu)
+├── ENGINE_MONITOR.ps1          ← PowerShell functions
+├── QUICK_COMMAND_REFERENCE.md  ← Copy commands from here
+├── ENGINE_MONITORING_SUITE.txt ← This file
+└── [other atmospheric grid files]
+```
+
+---
+
+## NEXT STEPS
+
+1. **Today:**
+   - Run `ENGINE_MONITOR.bat` to test
+   - Try `Get-QuickStatus` in PowerShell
+   - Verify all 3 engines show up
+
+2. **This Week:**
+   - Set up continuous monitoring
+   - Create daily export script
+   - Monitor rejection rates
+
+3. **Going Forward:**
+   - Run `Get-QuickStatus` every 5 minutes
+   - Track metrics in spreadsheet
+   - Alert if thresholds exceeded
+   - Analyze decision patterns
+
+---
+
+## TROUBLESHOOTING
+
+### "docker: command not found"
+- Make sure Docker is installed and running
+- Restart PowerShell/Command Prompt
+
+### "Container not responding"
+```powershell
+docker restart engine-365-days ultimate-engine tenetaiagency-101
+```
+
+### "Permission denied"
+- Run Command Prompt/PowerShell as Administrator
+
+### No output from commands
+- Check: `docker ps` (are engines running?)
+- Check: `docker logs engine-365-days` (any errors?)
+
+---
+
+## SUMMARY
+
+✓ You have 3 running Docker engines
+✓ You can monitor them with batch file or PowerShell
+✓ Commands run anytime to check metrics
+✓ Detailed logs available in containers
+✓ Real-time stats with docker stats
+✓ No installation needed (Docker required)
+
+**Run anytime. Check metrics. Monitor decisions. Track cycles.**
+
+---
+
+**Everything is ready. Start with: `ENGINE_MONITOR.bat`**

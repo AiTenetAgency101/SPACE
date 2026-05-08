@@ -1,0 +1,26 @@
+﻿ENTANGLED_ENGINES:
+  freeCodeCamp:
+    url: "https://github.com/freeCodeCamp/freeCodeCamp"
+    role: "doctrine_corpus"
+    mode: "remote_reference"
+    allowed_usage:
+      - pattern_learning
+      - example_reference
+      - non-executable corpus
+
+  tensorflow-core:
+    url: "https://github.com/tensorflow/tensorflow"
+    role: "ml_engine"
+    mode: "pip_runtime"
+    allowed_usage:
+      - model_training
+      - inference
+      - TRON_job_execution
+
+  tensorflow-playground:
+    url: "https://github.com/tensorflow/tensorflow"
+    role: "ml_sandbox"
+    mode: "pip_runtime"
+    allowed_usage:
+      - experimentation
+      - safe_sandbox
