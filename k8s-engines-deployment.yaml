@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: engine-365-days
-        image: node:25.9.0-slim
+        image: node:26.1.0-slim
         imagePullPolicy: IfNotPresent
         command: ["node", "dist/index.js"]
         ports:
@@ -95,7 +95,7 @@ spec:
     spec:
       containers:
       - name: ultimate-engine
-        image: node:25.9.0-slim
+        image: node:26.1.0-slim
         imagePullPolicy: IfNotPresent
         command: ["node", "dist/index.js"]
         ports:
@@ -168,7 +168,7 @@ spec:
     spec:
       containers:
       - name: tenetaiagency-101
-        image: node:25.9.0-slim
+        image: node:26.1.0-slim
         imagePullPolicy: IfNotPresent
         command: ["node", "dist/index.js"]
         ports:
