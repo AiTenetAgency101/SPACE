@@ -1,0 +1,10 @@
+rule 1: no drift
+rule 2: no noise
+rule 3: pattern-first
+rule 4: coherence over convenience
+rule 5: every module must declare identity
+rule 6: every pipeline must declare input/output
+rule 7: every engine must declare state
+rule 8: every skill must declare scope
+rule 9: council signs off before deployment
+rule 10: council maintains system integrity

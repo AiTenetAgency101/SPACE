@@ -1,0 +1,12 @@
+{
+  "council": "design-governance",
+  "version": "1.0",
+  "roles": [
+    "pattern-keeper",
+    "architecture-review",
+    "skill-approval",
+    "pipeline-audit",
+    "engine-integrity",
+    "web-standardisation"
+  ]
+}

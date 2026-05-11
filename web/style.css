@@ -1,0 +1,16 @@
+body {
+    margin:0;
+    padding:0;
+    background:#02030a;
+    color:#00ff9f;
+    font-family:Consolas, monospace;
+}
+#app {
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2.6rem;
+    letter-spacing:0.12em;
+}

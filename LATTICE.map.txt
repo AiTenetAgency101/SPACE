@@ -1,0 +1,41 @@
+SCYRONISED LATTICE MAP
+----------------------
+ROOT: C:\COM
+
+ENGINES:
+  - ENGINE        -> C:\COM\engines\ENGINE
+  - ENGINE2       -> C:\COM\engines\ENGINE2
+  - ENGINE365     -> C:\COM\engines\ENGINE365
+  - XYO           -> C:\COM\engines\XYO
+  - UNIFIED5D     -> C:\COM\engines\UNIFIED5D
+  - ATMOSPHERIC   -> C:\COM\engines\ATMOSPHERIC
+
+IDENTITY:
+  - TENETAiAGENCY -> C:\COM\identity\TENETAiAGENCY
+
+SKILLS:
+  - cloudflare    -> C:\COM\skills\cloudflare
+  - thirdbrain-v5 -> C:\COM\skills\thirdbrain-v5
+  - eridani-speak -> C:\COM\skills\eridani-speak
+
+DATA:
+  - ATMOSPHERIC   -> C:\COM\data\ATMOSPHERIC
+  - AURORA-1      -> C:\COM\data\AURORA-1
+  - PRISM-6       -> C:\COM\data\PRISM-6
+  - SYNAPSE-3     -> C:\COM\data\SYNAPSE-3
+
+TOKENS:
+  - PWU           -> C:\COM\tokens\PWU
+
+ENTANGLED:
+  - ENTANGLED     -> C:\COM\entangled
+
+COUNCIL:
+  - DESIGN        -> C:\COM\design-council
+
+WEB:
+  - UI            -> C:\COM\web
+
+SPRITE:
+  - SRC           -> C:\COM\sprite-src
+  - OUT           -> C:\COM\sprite-out
