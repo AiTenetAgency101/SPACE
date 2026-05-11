@@ -1,0 +1,25 @@
+===========================
+  LATTICE CYCLES
+===========================
+
+CORE EXECUTION CYCLE:
+1) aTom    define atomic logic
+2) SPACE   assemble modules
+3) TIME    schedule/sequence
+4) ENERGY  execute runtime
+5) MOTION  express behaviours
+
+DATA/ASSET CYCLE:
+SPACE   MATTER  SPACE
+Modules read/write assets, remain bound to identity + domain.
+
+IDENTITY CYCLE:
+WALLET   RESOLVER  DOMAIN  SPACE  TIME
+Identity anchors all execution and state.
+
+CONFIG CYCLE:
+VOID  (TIME, SPACE, aTom, ENERGY, MATTER, MOTION, IDENTITY)
+Config and secrets modulate every layer without carrying logic themselves.
+
+STATUS:
+All cycles are now explicitly mapped and bound into the lattice.

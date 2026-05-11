@@ -1,0 +1,20 @@
+===========================
+  DOMAIN ROOTS
+===========================
+
+PRIMARY_DOMAIN:
+RobDoe.com
+Registrar: TENETAIAGENCY101
+Expiry: 23 Feb 2027
+AutoRenew: ON
+DNS: Cloudflare (Authoritative)
+
+SECONDARY_DOMAIN:
+robertdoe.pw
+Registrar: Standard
+Expiry: 24 Feb 2027
+AutoRenew: ON
+DNS: Cloudflare (Authoritative)
+
+STATUS:
+Both domains clean, synchronized, and production-ready.

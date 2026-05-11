@@ -1,0 +1,22 @@
+===========================
+  LATTICE NODES
+===========================
+
+PRIME:
+- TIME
+- SPACE
+- aTom
+
+ENVIRONMENT:
+- ENERGY
+- MATTER
+- MOTION
+- VOID
+
+IDENTITY:
+- WALLET (0x1ae2af702063d304f8ebac2153c91d79c62e381c)
+- DOMAIN (RobDoe.com, robertdoe.pw)
+- RESOLVER (UD Identity)
+
+ROLE:
+Each node is a stable coordinate in the system graph.

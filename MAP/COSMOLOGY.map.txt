@@ -1,0 +1,23 @@
+===========================
+  7-REPO COSMOLOGY MAP
+===========================
+
+PRIME SYSTEM
+------------
+TIME    Engine / Lattice / Identity
+SPACE   Skills / Cognition / Modules
+aTom    Atomic Units / Primitives / Micro-Logic
+
+ENVIRONMENT SYSTEM
+------------------
+ENERGY  Runtime / Execution / Pipelines
+MATTER  Data / Storage / Assets
+MOTION  Behaviours / Agents / Automation
+VOID    Config / Secrets / Environment
+
+FLOW
+----
+aTom  SPACE  TIME  ENERGY  MOTION
+                    
+         MATTER     VOID
+

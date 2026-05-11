@@ -1,0 +1,21 @@
+===========================
+  LATTICE EDGES
+===========================
+
+PRIME BINDINGS:
+aTom   SPACE   (Atomic logic  Modules)
+SPACE  TIME    (Modules  Temporal engine)
+
+ENVIRONMENT BINDINGS:
+TIME    ENERGY (Scheduling  Runtime)
+SPACE   MATTER (Modules  Data/Assets)
+aTom    MOTION (Atomic logic  Behaviours)
+VOID    ALL    (Config/Secrets  Global influence)
+
+IDENTITY BINDINGS:
+WALLET   RESOLVER (Ownership  Resolution)
+RESOLVER  DOMAIN  (Resolution  Namespace)
+DOMAIN   SPACE    (Namespace  Modules)
+WALLET   TIME     (Identity  State/Session)
+
+All edges are directional but can be traversed bidirectionally for analysis.

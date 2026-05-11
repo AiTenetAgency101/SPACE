@@ -1,0 +1,18 @@
+===========================
+  IDENTITY ANCHOR
+===========================
+
+WALLET_ADDRESS:
+0x1ae2af702063d304f8ebac2153c91d79c62e381c
+
+TYPE:
+EVM Identity Wallet (Non-Spending)
+
+ROLE:
+- Anchor for Unstoppable Domains
+- Tokenized Identity Holder
+- Resolver Authority
+- Cycle Authentication Node
+
+RISK:
+Zero (No private key exposure, no approvals, no spending)

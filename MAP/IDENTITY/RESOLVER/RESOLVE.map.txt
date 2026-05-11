@@ -1,0 +1,18 @@
+===========================
+  RESOLVER TOPOLOGY
+===========================
+
+UD_DOMAIN:
+Tokenized + Whitelisted
+
+RESOLVER_ROLE:
+- Identity Resolution
+- Namespace Binding
+- Profile Metadata
+- Web3 Identity Sync
+
+BOUND_WALLET:
+0x1ae2af702063d304f8ebac2153c91d79c62e381c
+
+CYCLE_STATUS:
+READY  Identity anchor connected.

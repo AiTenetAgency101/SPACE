@@ -1,0 +1,22 @@
+===========================
+  COSMOLOGY EXTENSION
+===========================
+
+This extension binds the IDENTITY layer into the
+7-REPO COSMOLOGY MAP.
+
+BINDINGS:
+IDENTITY  TIME (State)
+IDENTITY  SPACE (Modules)
+IDENTITY  aTom (Atomic Logic)
+
+IDENTITY  ENERGY (Runtime Auth)
+IDENTITY  MATTER (Data Ownership)
+IDENTITY  MOTION (Agent Permissions)
+IDENTITY  VOID (Secrets / Config)
+
+ANCHOR:
+0x1ae2af702063d304f8ebac2153c91d79c62e381c
+
+STATUS:
+FULLY SYNCHRONISED
