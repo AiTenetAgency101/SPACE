@@ -1,0 +1,46 @@
+name: ENGINE2 Multi-Cluster Health
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Target cluster (cluster-a | cluster-b | all)"
+        required: true
+        default: "all"
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup kubectl
+        uses: azure/setup-kubectl@v4
+
+      - name: Cluster A health
+        if: ${{ github.event.inputs.target == 'cluster-a' || github.event.inputs.target == 'all' }}
+        run: |
+          echo "${{ secrets.KUBECONFIG_CLUSTER_A }}" > kubeconfig-cluster-a
+          export KUBECONFIG=${{ github.workspace }}/kubeconfig-cluster-a
+          echo "=== CLUSTER A: NODES ==="
+          kubectl get nodes
+          echo "=== CLUSTER A: ENGINE2 PODS ==="
+          kubectl get pods -A | grep -i engine2 || true
+        shell: bash
+
+      - name: Cluster B health
+        if: ${{ github.event.inputs.target == 'cluster-b' || github.event.inputs.target == 'all' }}
+        run: |
+          echo "${{ secrets.KUBECONFIG_CLUSTER_B }}" > kubeconfig-cluster-b
+          export KUBECONFIG=${{ github.workspace }}/kubeconfig-cluster-b
+          echo "=== CLUSTER B: NODES ==="
+          kubectl get nodes
+          echo "=== CLUSTER B: ENGINE2 PODS ==="
+          kubectl get pods -A | grep -i engine2 || true
+        shell: bash
+
+

@@ -1,0 +1,10 @@
+{
+  "name": "newton",
+  "version": "1.0.0",
+  "description": "Isaac Newton — Laws of motion, gravitation, calculus",
+  "entrypoints": {
+    "classify": "operator.newton.classify",
+    "evaluate": "operator.newton.evaluate",
+    "answer": "operator.newton.answer"
+  }
+}

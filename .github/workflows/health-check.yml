@@ -1,0 +1,29 @@
+# Health Check Workflow
+
+name: Health Check
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Every hour
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run health check
+      run: ./check_health.sh
+
+    - name: Upload health check results
+      uses: actions/upload-artifact@v7
+      with:
+        name: health-check-results
+        path: ./results/health_check.json
+
+

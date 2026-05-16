@@ -1,0 +1,54 @@
+name: ENGINE2 Multi-Cluster Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Target cluster (cluster-a | cluster-b | all)"
+        required: true
+        default: "all"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup kubectl
+        uses: azure/setup-kubectl@v4
+
+      - name: Write kubeconfig for cluster A
+        if: ${{ github.event.inputs.target == 'cluster-a' || github.event.inputs.target == 'all' }}
+        run: |
+          echo "${{ secrets.KUBECONFIG_CLUSTER_A }}" > kubeconfig-cluster-a
+        shell: bash
+
+      - name: Deploy to cluster A
+        if: ${{ github.event.inputs.target == 'cluster-a' || github.event.inputs.target == 'all' }}
+        env:
+          KUBECONFIG: ${{ github.workspace }}/kubeconfig-cluster-a
+        run: |
+          chmod +x ./scripts/health/k8s-deploy-orchestrator.sh
+          ./scripts/health/k8s-deploy-orchestrator.sh
+        shell: bash
+
+      - name: Write kubeconfig for cluster B
+        if: ${{ github.event.inputs.target == 'cluster-b' || github.event.inputs.target == 'all' }}
+        run: |
+          echo "${{ secrets.KUBECONFIG_CLUSTER_B }}" > kubeconfig-cluster-b
+        shell: bash
+
+      - name: Deploy to cluster B
+        if: ${{ github.event.inputs.target == 'cluster-b' || github.event.inputs.target == 'all' }}
+        env:
+          KUBECONFIG: ${{ github.workspace }}/kubeconfig-cluster-b
+        run: |
+          chmod +x ./scripts/health/k8s-deploy-orchestrator.sh
+          ./scripts/health/k8s-deploy-orchestrator.sh
+        shell: bash
+
+

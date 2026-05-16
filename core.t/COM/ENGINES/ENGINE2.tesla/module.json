@@ -1,0 +1,10 @@
+{
+  "name": "ENGINE2.tesla",
+  "version": "1.0.0",
+  "description": "ENGINE2 aligned with Nikola Tesla — resonance, oscillation, electromagnetism",
+  "entrypoints": {
+    "classify": "operator.engine2.tesla.classify",
+    "evaluate": "operator.engine2.tesla.evaluate",
+    "answer": "operator.engine2.tesla.answer"
+  }
+}
