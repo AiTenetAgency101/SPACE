@@ -1,6 +1,6 @@
 # Multi-stage optimized Dockerfile with DHI migration
 # Stage 1: Builder
-FROM node:25.9.0-slim AS builder
+FROM node:26.2.0-slim AS builder
 WORKDIR /build
 COPY package.json package-lock.json* ./
 RUN npm ci --only=production && npm cache clean --force
