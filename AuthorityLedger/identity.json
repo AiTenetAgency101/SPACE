@@ -1,0 +1,7 @@
+{
+  "handle": "AiAgency.101",
+  "domain": "RobDoe.com",
+  "address": "AiAgency.101@RobDoe.com",
+  "role": "Operator",
+  "scope": "This machine, this lattice, this repo"
+}
