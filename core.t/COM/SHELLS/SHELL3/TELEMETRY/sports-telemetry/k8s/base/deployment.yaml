@@ -1,0 +1,19 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sports-telemetry
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sports-telemetry
+  template:
+    metadata:
+      labels:
+        app: sports-telemetry
+    spec:
+      containers:
+        - name: sports-telemetry
+          image: ghcr.io/OWNER/sports-telemetry:latest
+          ports:
+            - containerPort: 8000
