@@ -6,7 +6,7 @@ pydantic>=2.13.4
 python-dotenv>=1.0.0
 
 # XYO Integration
-sympy>=1.12          # Symbolic math for health synchronization
+sympy>=1.14.0          # Symbolic math for health synchronization
 requests>=2.31.0     # XYO API calls
 
 # Container Management
