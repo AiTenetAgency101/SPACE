@@ -58,11 +58,11 @@ class TRONRhythmEngine:
         # TRON phases
         self.phase_timestamps = {phase: 0.0 for phase in TRONPhase}
         self.phase_allocations = {
-            TRONPhase.GRID_SYNC: 0.02,  # 2s
-            TRONPhase.HEARTBEAT: 0.02,  # 2s
-            TRONPhase.COMMITMENT: 0.02,  # 2s
-            TRONPhase.CONSENSUS: 0.02,  # 2s
-            TRONPhase.EXECUTION: 0.02,  # 2s
+            TRONPhase.GRID_SYNC: 0.02,  # 20ms
+            TRONPhase.HEARTBEAT: 0.02,  # 20ms
+            TRONPhase.COMMITMENT: 0.02,  # 20ms
+            TRONPhase.CONSENSUS: 0.02,  # 20ms
+            TRONPhase.EXECUTION: 0.02,  # 20ms
         }
 
         # State tracking
