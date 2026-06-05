@@ -1,10 +1,8 @@
-# Health Check Workflow
-
 name: Health Check
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every hour
+    - cron: '0 * * * *'
 
 jobs:
   build:
@@ -14,16 +12,17 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: false
 
-    - name: Run health check
-      run: ./check_health.sh
+      - name: Run health check
+        run: bash ./check_health.sh
 
-    - name: Upload health check results
-      uses: actions/upload-artifact@v7
-      with:
-        name: health-check-results
-        path: ./results/health_check.json
-
+      - name: Upload health check results
+        uses: actions/upload-artifact@v7
+        with:
+          name: health-check-results
+          path: ./results/health_check.json
 

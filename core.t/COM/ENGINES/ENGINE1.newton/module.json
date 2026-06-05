@@ -1,0 +1,10 @@
+{
+  "name": "ENGINE1.newton",
+  "version": "1.0.0",
+  "description": "ENGINE1 aligned with Isaac Newton — motion, force, gravitation",
+  "entrypoints": {
+    "classify": "operator.engine1.newton.classify",
+    "evaluate": "operator.engine1.newton.evaluate",
+    "answer": "operator.engine1.newton.answer"
+  }
+}

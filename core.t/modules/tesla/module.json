@@ -1,0 +1,10 @@
+{
+  "name": "tesla",
+  "version": "1.0.0",
+  "description": "Nikola Tesla — Resonance, oscillation, electromagnetism",
+  "entrypoints": {
+    "classify": "operator.tesla.classify",
+    "evaluate": "operator.tesla.evaluate",
+    "answer": "operator.tesla.answer"
+  }
+}

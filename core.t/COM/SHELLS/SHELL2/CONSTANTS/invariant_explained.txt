@@ -1,0 +1,5 @@
+1/7200
+3 arcseconds
+12 seconds of a circle
+
+These three values are equivalent representations of the same invariant cycle slice.
