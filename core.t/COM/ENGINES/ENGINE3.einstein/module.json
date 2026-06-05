@@ -1,0 +1,10 @@
+{
+  "name": "ENGINE3.einstein",
+  "version": "1.0.0",
+  "description": "ENGINE3 aligned with Albert Einstein — invariants, curvature, relativity",
+  "entrypoints": {
+    "classify": "operator.engine3.einstein.classify",
+    "evaluate": "operator.engine3.einstein.evaluate",
+    "answer": "operator.engine3.einstein.answer"
+  }
+}

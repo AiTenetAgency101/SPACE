@@ -1,0 +1,10 @@
+{
+  "name": "einstein",
+  "version": "1.0.0",
+  "description": "Albert Einstein — Relativity, invariants, curvature",
+  "entrypoints": {
+    "classify": "operator.einstein.classify",
+    "evaluate": "operator.einstein.evaluate",
+    "answer": "operator.einstein.answer"
+  }
+}
