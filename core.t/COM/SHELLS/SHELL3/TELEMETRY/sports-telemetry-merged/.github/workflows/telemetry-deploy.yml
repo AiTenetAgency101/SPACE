@@ -1,0 +1,11 @@
+﻿name: Telemetry Deploy
+on: [workflow_dispatch]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+      - run: kubectl apply -k k8s/overlays/cluster-a
+
