@@ -1,0 +1,6 @@
+[submodule "ENGINE2/COM/SHELLS/SHELL3/TELEMETRY/sports-telemetry"]
+	path = ENGINE2/COM/SHELLS/SHELL3/TELEMETRY/sports-telemetry
+	url = https://github.com/AiTenetAgency101/sports-telemetry.git
+[submodule "ENGINE2/COM/SHELLS/SHELL3/TELEMETRY/sports-telemetry-merged"]
+	path = ENGINE2/COM/SHELLS/SHELL3/TELEMETRY/sports-telemetry-merged
+	url = https://github.com/AiTenetAgency101/sports-telemetry-merged.git
