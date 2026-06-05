@@ -1,0 +1,11 @@
+﻿name: Telemetry Build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t ghcr.io/OWNER/sports-telemetry:latest .
+
