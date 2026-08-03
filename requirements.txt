@@ -10,7 +10,7 @@ sympy>=1.14.0          # Symbolic math for health synchronization
 requests>=2.34.2     # XYO API calls
 
 # Container Management
-docker>=6.0.0
+docker>=7.2.0
 docker-compose>=2.0.0
 
 # Security & Cryptography
