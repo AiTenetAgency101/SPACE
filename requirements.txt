@@ -19,7 +19,7 @@ pycryptodome>=3.18.0
 
 # Data Processing
 numpy>=1.24.0
-pandas>=2.0.0
+pandas>=3.0.5
 
 # AI/ML (optional)
 tensorflow>=2.13.0   # For ML-based health prediction
