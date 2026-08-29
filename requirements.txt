@@ -15,7 +15,7 @@ docker-compose>=2.0.0
 
 # Security & Cryptography
 cryptography>=50.0.0
-pycryptodome>=3.18.0
+pycryptodome>=3.23.0
 
 # Data Processing
 numpy>=1.24.0
