@@ -3,7 +3,7 @@
 
 # Core ENGINE
 pydantic>=2.13.4
-python-dotenv>=1.0.0
+python-dotenv>=1.2.3
 
 # XYO Integration
 sympy>=1.14.0          # Symbolic math for health synchronization
