@@ -1,0 +1,8 @@
+{
+  "repository": "ENGINE2",
+  "standard_merkle_root": "211d000f4a08ae144e844adffe6003ed70a4f1be6bba85de115461e2e09a61f4c57999bbddd4b3be972eff90f5822a89b78eb9ba45ad4965e38e5eddbba24a16",
+  "recursive_merkle_root": "f6f911546e59f538d4c19b706e08fe21defd7ee5933eb7268ab68bf821884c10e04b36705ffc00a522f61aaabc3fe66525086d901d8894d643ea7359c4a2282e",
+  "mandelbrot_z": "0.02553458+0.32321230j",
+  "mandelbrot_magnitude": "0.32421938",
+  "authority": "robdoe"
+}
